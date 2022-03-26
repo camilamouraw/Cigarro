@@ -1,20 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Aplicativo Cigarro
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
+    <p> Digite a quantidade de cigarros fumados por dia: </p>
+    <input type = "number" [(ngModel)]="quantidadeCigarros">
+
+    <p> Digite a quantidade de anos fumados: </p>
+    <input type = "number" [(ngModel)]="quantidadeAnos">
+
+    <br>
+    <br>
+
+    <ion-button (click)="CalcularTempo()"> Enviar</ion-button>
+
+    <h3> {{minutosPerdidos}} minutos</h3>
+    <h3> {{horasPerdidas}} horas </h3>
+    <h3> {{diasPerdidos}} dias</h3>
+    <h3> {{mesesPerdidos}} meses</h3>
+    <h3> {{anosPerdidos}} anos</h3> 
+
+
   </div>
+  
 </ion-content>
+
+
